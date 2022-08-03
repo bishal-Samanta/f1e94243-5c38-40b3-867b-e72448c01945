@@ -53,10 +53,10 @@ describe("Testing Application", () => {
             fireEvent.click(screen.getByTestId("dice-B-button"));
             let valA=parseInt(screen.getByTestId("dice-A-value").innerHTML.split(": ")[1]);
             let valB=parseInt(screen.getByTestId("dice-B-value").innerHTML.split(": ")[1]);
-            expect(screen.getByTestId("player1-score")).toHaveTextContent("Player 1 Scores: 0");
-            expect(screen.getByTestId("player2-score")).toHaveTextContent("Player 2 Scores: 0");
-            fireEvent.click(screen.getByTestId("dice-A-button"));
-            fireEvent.click(screen.getByTestId("dice-B-button"));
+            // expect(screen.getByTestId("player1-score")).toHaveTextContent("Player 1 Scores: 0");
+            // expect(screen.getByTestId("player2-score")).toHaveTextContent("Player 2 Scores: 0");
+            // fireEvent.click(screen.getByTestId("dice-A-button"));
+            // fireEvent.click(screen.getByTestId("dice-B-button"));
             expect(screen.getByTestId("player1-score")).toHaveTextContent("Player 1 Scores: "+valA);
             expect(screen.getByTestId("player2-score")).toHaveTextContent("Player 2 Scores: "+valB);
             global.score+=1;
